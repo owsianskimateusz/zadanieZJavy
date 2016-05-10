@@ -15,11 +15,7 @@ import java.util.Scanner;
  */
 public class CommonUtils 
 {
-
-	static String regex1 ="[0-9]";
-	String amountRegex = "{1,4}";
 	static String regexMoreThanOneWhitespace ="[0-9, \\s]{2,}";
-	
 	
 	public static boolean isEmpty(String line)
 	{

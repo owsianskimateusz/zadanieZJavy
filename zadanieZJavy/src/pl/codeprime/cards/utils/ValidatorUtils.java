@@ -41,7 +41,7 @@ public class ValidatorUtils
 		List<Boolean> isRangeList = new ArrayList<>();
 		isRangeList.addAll(CommonUtils.asList(values).stream().map(value -> value != null ? ValidatorUtils.isInRange(value, 1, 16) : Boolean.FALSE).collect(Collectors.toList()));
 		
-		isRangeList.add(values.length == 4);
+		isRangeList.add(values.length == MAX__SIZE_CARDS);
 		boolean i  = isRangeList.contains(Boolean.FALSE);
 		
 		return !i;
@@ -55,6 +55,7 @@ public class ValidatorUtils
 			isContainsList.add(list.contains(value));
 		}
 		
-		return !isContainsList.contains(Boolean.FALSE);
+		System.out.println(isContainsList);
+		return isContainsList.contains(Boolean.TRUE);
 	}
 }
